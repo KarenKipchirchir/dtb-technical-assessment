@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: dtb-technical-test-card-service
+  profiles:
+    active: dev

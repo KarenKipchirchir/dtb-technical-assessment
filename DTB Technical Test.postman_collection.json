@@ -1,0 +1,2347 @@
+{
+	"info": {
+		"_postman_id": "93a6d014-352a-42c1-bdae-dcd93b5eaa4a",
+		"name": "DTB Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17557088",
+		"_collection_link": "https://orange-meteor-453129.postman.co/workspace/My-Workspace~6310c0fd-b803-49ef-8c23-64a3f725f38d/collection/17557088-93a6d014-352a-42c1-bdae-dcd93b5eaa4a?action=share&source=collection_link&creator=17557088"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "createCustomerRequest",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"messageId\": \"{{$guid}}\",\n    \"customerId\": {{$randomBankAccount}},\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"otherName\": \"{{$randomLastName}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customer/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"create"
+									]
+								},
+								"description": "createCustomerRequest"
+							},
+							"response": [
+								{
+									"name": "createCustomerRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"messageId\": \"{{$guid}}\",\n    \"customerId\": 1234567,\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"otherName\": \"{{$randomLastName}}\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 22:53:02 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"84f2e2ed-ff4f-44b4-a5f1-6f65e546fff1\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"customerId\": 1234567,\n    \"firstName\": \"Marlen\",\n    \"lastName\": \"Wiza\",\n    \"otherName\": \"Olson\",\n    \"customerStatus\": \"ACTIVE\"\n}"
+								},
+								{
+									"name": "createCustomerRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"messageId\": \"{{$guid}}\",\n    \"customerId\": 1234567,\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"otherName\": \"{{$randomLastName}}\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 22:53:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"1f63fa52-d345-445a-ac45-21a7a2a63b68\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Customer ID exists in system\"\n    ],\n    \"customerId\": 1234567,\n    \"firstName\": \"Elroy\",\n    \"lastName\": \"Jerde\",\n    \"otherName\": \"Stamm\",\n    \"customerStatus\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customer/filter?messageId={{$guid}}&customerNames=MargeLeu&startDate=2025-01-01&endDate=2025-12-31&pageNumber=0&pageSize=20",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "messageId",
+											"value": "{{$guid}}"
+										},
+										{
+											"key": "customerNames",
+											"value": "MargeLeu"
+										},
+										{
+											"key": "startDate",
+											"value": "2025-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2025-12-31"
+										},
+										{
+											"key": "pageNumber",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/filter?messageId={{$guid}}&customerNames=MargeLeu&startDate=2025-01-01&endDate=2025-12-31&pageNumber=0&pageSize=20",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}"
+												},
+												{
+													"key": "customerNames",
+													"value": "MargeLeu"
+												},
+												{
+													"key": "startDate",
+													"value": "2025-01-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2025-12-31"
+												},
+												{
+													"key": "pageNumber",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 09:20:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"304ca299-678f-4709-be4d-8177adba8397\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"customers\": [\n        {\n            \"customerId\": 80807473,\n            \"firstName\": \"Marge\",\n            \"lastName\": \"Leuschke\",\n            \"otherName\": \"Abshire\",\n            \"customerStatus\": \"ACTIVE\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/filter?messageId={{$guid}}&customerNames=test&startDate=2025-01-01&endDate=2025-12-31&pageNumber=0&pageSize=20",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}"
+												},
+												{
+													"key": "customerNames",
+													"value": "test"
+												},
+												{
+													"key": "startDate",
+													"value": "2025-01-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2025-12-31"
+												},
+												{
+													"key": "pageNumber",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 09:20:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"2feaea02-8684-49cc-b54f-7d3893d96d79\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"customers\": []\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "updateCustomerDetails",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"customerId\": 1234567,\n  \"status\": \"active\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customer/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"update"
+									]
+								},
+								"description": "updateCustomerDetails"
+							},
+							"response": [
+								{
+									"name": "updateCustomerDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"customerId\": 1234567,\n  \"status\": \"active\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 23:15:23 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"00b33112-6946-4ab8-8074-112c5714f812\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"customerId\": 1234567,\n    \"firstName\": \"Marlen\",\n    \"lastName\": \"Wiza\",\n    \"otherName\": \"Olson\",\n    \"customerStatus\": \"active\"\n}"
+								},
+								{
+									"name": "updateCustomerDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"123456\",\n  \"customerId\": 1234567,\n  \"status\": \"active\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"update"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 23:15:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"123456\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Idempotency conflict detected\"\n    ],\n    \"customerId\": 1234567,\n    \"firstName\": null,\n    \"lastName\": null,\n    \"otherName\": null,\n    \"customerStatus\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "deleteCustomerDetails",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"customerId\": 1234567\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customer/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"delete"
+									]
+								},
+								"description": "deleteCustomerDetails"
+							},
+							"response": [
+								{
+									"name": "deleteCustomerDetails",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"customerId\": 1234567\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 23:16:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"5d152c62-2580-480d-8140-18bb1499e64d\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"customerId\": 1234567,\n    \"firstName\": \"Marlen\",\n    \"lastName\": \"Wiza\",\n    \"otherName\": \"Olson\",\n    \"customerStatus\": \"INACTIVE\"\n}"
+								},
+								{
+									"name": "deleteCustomerDetails",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"5d152c62-2580-480d-8140-18bb1499e64d\",\n  \"customerId\": 1234567\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customer/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"delete"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 18 May 2025 23:16:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"5d152c62-2580-480d-8140-18bb1499e64d\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Idempotency conflict detected\"\n    ],\n    \"customerId\": 1234567,\n    \"firstName\": null,\n    \"lastName\": null,\n    \"otherName\": null,\n    \"customerStatus\": null\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "createAccountRequest",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"Duis cupidatat\",\n  \"accountId\": 98631419,\n  \"iban\": \"pariatur sint et reprehenderit\",\n  \"bicSwift\": \"id Lorem aliqua\",\n  \"branchCode\": -83771980,\n  \"currency\": \"aliqua consect\",\n  \"status\": \"nisi in qui ut nostrud\",\n  \"customerId\": -28965840\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/account/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"create"
+									]
+								},
+								"description": "createAccountRequest"
+							},
+							"response": [
+								{
+									"name": "createAccountRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"bicSwift\": \"DTKEKENAXXX\",\n  \"branchCode\": 234,\n  \"currency\": \"KES\",\n  \"customerId\": 17247447\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 11:43:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"2e99daf6-9229-4e7e-b633-fb624233c24f\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Maximum number of accounts reached\"\n    ],\n    \"accountId\": null,\n    \"iban\": null,\n    \"bicSwift\": \"DTKEKENAXXX\",\n    \"accountStatus\": null,\n    \"accountCurrency\": null,\n    \"accountBranchCode\": null,\n    \"customerNames\": null,\n    \"customerId\": null\n}"
+								},
+								{
+									"name": "createAccountRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"bicSwift\": \"DTKEKENAXXX\",\n  \"branchCode\": 234,\n  \"currency\": \"KES\",\n  \"customerId\": 375775884\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 11:43:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"c67d7310-f1de-4cb4-9fe0-5fe409024504\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Customer ID does not exist in system\"\n    ],\n    \"accountId\": null,\n    \"iban\": null,\n    \"bicSwift\": \"DTKEKENAXXX\",\n    \"accountStatus\": null,\n    \"accountCurrency\": null,\n    \"accountBranchCode\": null,\n    \"customerNames\": null,\n    \"customerId\": null\n}"
+								},
+								{
+									"name": "createAccountRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"bicSwift\": \"DTKEKENAXXX\",\n  \"branchCode\": 234,\n  \"currency\": \"KES\",\n  \"customerId\": 80807473\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 11:45:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"86f646a1-3a26-4c76-b374-a8427517e643\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"accountId\": 100000004,\n    \"iban\": \"KE412301230100000004\",\n    \"bicSwift\": \"DTKEKENAXXX\",\n    \"accountStatus\": \"ACTIVE\",\n    \"accountCurrency\": \"KES\",\n    \"accountBranchCode\": 234,\n    \"customerNames\": \"Marge Leuschke Abshire\",\n    \"customerId\": 80807473\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"item": [
+						{
+							"name": "fetchAccountDetails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/account/filter?messageId={{$guid}}&iban=KE342301230100000003&bicSwift=DTKEKENAXXX&cardAlias=Karen&pageNumber=0&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "messageId",
+											"value": "{{$guid}}",
+											"description": "(Required) "
+										},
+										{
+											"key": "iban",
+											"value": "KE342301230100000003",
+											"description": "(Required) "
+										},
+										{
+											"key": "bicSwift",
+											"value": "DTKEKENAXXX",
+											"description": "(Required) "
+										},
+										{
+											"key": "cardAlias",
+											"value": "Karen",
+											"description": "(Required) "
+										},
+										{
+											"key": "pageNumber",
+											"value": "0",
+											"description": "(Required) "
+										},
+										{
+											"key": "pageSize",
+											"value": "10",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "fetchAccountDetails"
+							},
+							"response": [
+								{
+									"name": "fetchAccountDetails",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/filter?messageId={{$guid}}&iban=KE342301230100000003&bicSwift=DTKEKENAXXX&cardAlias=Karen&pageNumber=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}",
+													"description": "(Required) "
+												},
+												{
+													"key": "iban",
+													"value": "KE342301230100000003",
+													"description": "(Required) "
+												},
+												{
+													"key": "bicSwift",
+													"value": "DTKEKENAXXX",
+													"description": "(Required) "
+												},
+												{
+													"key": "cardAlias",
+													"value": "Karen",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageNumber",
+													"value": "0",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageSize",
+													"value": "10",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 20:02:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"4fb50aa4-dd99-4f8f-8db6-cb56a5858a69\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"accounts\": [\n        {\n            \"accountId\": 100000003,\n            \"iban\": \"KE342301230100000003\",\n            \"bicSwift\": \"DTKEKENAXXX\",\n            \"accountStatus\": \"ACTIVE\",\n            \"accountCurrency\": \"KES\",\n            \"accountBranchCode\": 234,\n            \"customerNames\": \"Jules Baumbach Prohaska\",\n            \"customerId\": 17247447,\n            \"cardType\": null\n        }\n    ]\n}"
+								},
+								{
+									"name": "fetchAccountDetails",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/filter?messageId={{$guid}}&iban=KE342301230100000003&bicSwift=DTKEKENAXXX&cardAlias=Karen's&pageNumber=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}",
+													"description": "(Required) "
+												},
+												{
+													"key": "iban",
+													"value": "KE342301230100000003",
+													"description": "(Required) "
+												},
+												{
+													"key": "bicSwift",
+													"value": "DTKEKENAXXX",
+													"description": "(Required) "
+												},
+												{
+													"key": "cardAlias",
+													"value": "Karen's",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageNumber",
+													"value": "0",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageSize",
+													"value": "10",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 20:02:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"582169ca-61ee-4aff-81c0-508dddc0b7eb\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"accounts\": [\n        {\n            \"accountId\": 100000003,\n            \"iban\": \"KE342301230100000003\",\n            \"bicSwift\": \"DTKEKENAXXX\",\n            \"accountStatus\": \"ACTIVE\",\n            \"accountCurrency\": \"KES\",\n            \"accountBranchCode\": 234,\n            \"customerNames\": \"Jules Baumbach Prohaska\",\n            \"customerId\": 17247447,\n            \"cardType\": null\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "updateAccountDetails",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"accountId\": 98631419,\n  \"status\": \"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/account/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"update"
+									]
+								},
+								"description": "updateAccountDetails"
+							},
+							"response": [
+								{
+									"name": "updateAccountDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"accountId\": 98631419,\n  \"status\": \"ACTIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"update"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 11:55:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"181e640b-4753-4dbc-9c64-62e53943f3d6\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Account does not exist in system\"\n    ],\n    \"accountId\": 98631419,\n    \"iban\": null,\n    \"bicSwift\": null,\n    \"accountStatus\": null,\n    \"accountCurrency\": null,\n    \"accountBranchCode\": null,\n    \"customerNames\": null,\n    \"customerId\": null\n}"
+								},
+								{
+									"name": "updateAccountDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"accountId\": 100000002,\n  \"status\": \"INACTIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 11:56:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"18842b61-4196-4c12-ab4c-008b35149cd3\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"accountId\": 100000002,\n    \"iban\": null,\n    \"bicSwift\": null,\n    \"accountStatus\": \"INACTIVE\",\n    \"accountCurrency\": null,\n    \"accountBranchCode\": null,\n    \"customerNames\": null,\n    \"customerId\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "deleteAccountDetails",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"accountId\": 100000004\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/account/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"delete"
+									]
+								},
+								"description": "deleteAccountDetails"
+							},
+							"response": [
+								{
+									"name": "deleteAccountDetails",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"accountId\": 100000004\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/account/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 12:03:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"361f4290-d9c2-4b5e-9fcd-46a50f9b674c\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"accountId\": 100000004,\n    \"iban\": null,\n    \"bicSwift\": null,\n    \"accountStatus\": \"INACTIVE\",\n    \"accountCurrency\": null,\n    \"accountBranchCode\": null,\n    \"customerNames\": null,\n    \"customerId\": null\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cards",
+			"item": [
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "createCardRequest",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardAlias\": \"Karen's Card\",\n  \"accountId\": 100000003,\n  \"cardType\": \"PHYSICAL\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cards/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cards",
+										"create"
+									]
+								},
+								"description": "createCardRequest"
+							},
+							"response": [
+								{
+									"name": "createCardRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardAlias\": \"Karen's Card\",\n  \"accountId\": 100000003,\n  \"cardType\": \"PHYSICAL\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 13:58:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"343e845f-ce8c-4e21-b9f8-d798c6718f0a\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"cardId\": 20000001,\n    \"cardAlias\": \"Karen's Card\",\n    \"accountId\": null,\n    \"cardType\": \"PHYSICAL\",\n    \"cardStatus\": \"ACTIVE\",\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": \"05/30\",\n    \"virtualCardCVVExpiryTime\": null\n}"
+								},
+								{
+									"name": "createCardRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardAlias\": \"Karen's Card\",\n  \"accountId\": 100000003,\n  \"cardType\": \"VIRTUAL\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 13:58:53 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"ecaeb7d5-c998-4601-a954-b2531c17d04d\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"cardId\": 20000002,\n    \"cardAlias\": \"Karen's Card\",\n    \"accountId\": null,\n    \"cardType\": \"VIRTUAL\",\n    \"cardStatus\": \"ACTIVE\",\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": \"05/30\",\n    \"virtualCardCVVExpiryTime\": \"2025-05-19T14:01:53.858+00:00\"\n}"
+								},
+								{
+									"name": "createCardRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardAlias\": \"Karen's Card\",\n  \"accountId\": 100000003,\n  \"cardType\": \"PHYSICAL\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:37:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"3c58ebf8-a4a7-4b57-b693-6ac3d1c64009\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"PHYSICAL Card type already exists for this account\"\n    ],\n    \"cardId\": null,\n    \"cardAlias\": null,\n    \"accountId\": null,\n    \"cardType\": null,\n    \"cardStatus\": null,\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": null,\n    \"virtualCardCVVExpiryTime\": null\n}"
+								},
+								{
+									"name": "createCardRequest",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardAlias\": \"Karen's Card\",\n  \"accountId\": 100000003,\n  \"cardType\": \"VIRTUAL\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:37:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"bb29a32d-9b67-4ecc-bfc1-6fab00e1de30\",\n    \"statusCode\": \"1\",\n    \"statusDescription\": \"Failure\",\n    \"errorInfoList\": [\n        \"Maximum number of cards reached\"\n    ],\n    \"cardId\": null,\n    \"cardAlias\": null,\n    \"accountId\": null,\n    \"cardType\": null,\n    \"cardStatus\": null,\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": null,\n    \"virtualCardCVVExpiryTime\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"item": [
+						{
+							"name": "fetchCardDetails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cards/filter?messageId={{$guid}}&cardAlias=Karen&typeOfCard=VIRTUAL&pan=1000000037675488&override=true&pageNumber=0&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cards",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "messageId",
+											"value": "{{$guid}}",
+											"description": "(Required) "
+										},
+										{
+											"key": "cardAlias",
+											"value": "Karen",
+											"description": "(Required) "
+										},
+										{
+											"key": "typeOfCard",
+											"value": "VIRTUAL",
+											"description": "(Required) "
+										},
+										{
+											"key": "pan",
+											"value": "1000000037675488",
+											"description": "(Required) "
+										},
+										{
+											"key": "override",
+											"value": "true",
+											"description": "(Required) "
+										},
+										{
+											"key": "pageNumber",
+											"value": "0",
+											"description": "(Required) "
+										},
+										{
+											"key": "pageSize",
+											"value": "10",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "fetchCardDetails"
+							},
+							"response": [
+								{
+									"name": "fetchCardDetails",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/filter?messageId={{$guid}}&cardAlias=Karen&typeOfCard=VIRTUAL&pan=1000000037675488&override=true&pageNumber=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}",
+													"description": "(Required) "
+												},
+												{
+													"key": "cardAlias",
+													"value": "Karen",
+													"description": "(Required) "
+												},
+												{
+													"key": "typeOfCard",
+													"value": "VIRTUAL",
+													"description": "(Required) "
+												},
+												{
+													"key": "pan",
+													"value": "1000000037675488",
+													"description": "(Required) "
+												},
+												{
+													"key": "override",
+													"value": "true",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageNumber",
+													"value": "0",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageSize",
+													"value": "10",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:40:55 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"35626dc9-b8ff-422f-8c08-82e34bb65197\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"cards\": [\n        {\n            \"cardId\": 20000001,\n            \"cardAlias\": \"Karen's Card\",\n            \"accountId\": null,\n            \"cardType\": \"VIRTUAL\",\n            \"cardStatus\": \"ACTIVE\",\n            \"pan\": \"1000000037675488\",\n            \"cvv\": \"221\",\n            \"cardExpiryDate\": \"05/30\",\n            \"virtualCardCVVExpiryTime\": \"2025-05-19T14:43:54.998+00:00\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "fetchCardDetails",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/filter?messageId={{$guid}}&cardAlias=Karen&typeOfCard=VIRTUAL&pan=1000000037675488&override=false&pageNumber=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "messageId",
+													"value": "{{$guid}}",
+													"description": "(Required) "
+												},
+												{
+													"key": "cardAlias",
+													"value": "Karen",
+													"description": "(Required) "
+												},
+												{
+													"key": "typeOfCard",
+													"value": "VIRTUAL",
+													"description": "(Required) "
+												},
+												{
+													"key": "pan",
+													"value": "1000000037675488",
+													"description": "(Required) "
+												},
+												{
+													"key": "override",
+													"value": "false",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageNumber",
+													"value": "0",
+													"description": "(Required) "
+												},
+												{
+													"key": "pageSize",
+													"value": "10",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:41:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"7e77c96a-3618-49e2-9846-d34dfb6288c1\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"cards\": [\n        {\n            \"cardId\": 20000001,\n            \"cardAlias\": \"Karen's Card\",\n            \"accountId\": null,\n            \"cardType\": \"VIRTUAL\",\n            \"cardStatus\": \"ACTIVE\",\n            \"pan\": \"100000******5488\",\n            \"cvv\": \"***\",\n            \"cardExpiryDate\": \"05/30\",\n            \"virtualCardCVVExpiryTime\": \"2025-05-19T14:44:09.799+00:00\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "updateCardDetails",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardId\": 20000000,\n  \"cardAlias\": \"Lory's Card\",\n  \"status\": \"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cards/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cards",
+										"update"
+									]
+								},
+								"description": "updateCardDetails"
+							},
+							"response": [
+								{
+									"name": "updateCardDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardId\": 20000000,\n  \"cardAlias\": \"Lory's Card\",\n  \"status\": \"ACTIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:44:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"a548e3f7-52c7-4e0d-ab27-ac0d5f098064\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"cardId\": 20000000,\n    \"cardAlias\": \"Lory's Card\",\n    \"accountId\": null,\n    \"cardType\": \"PHYSICAL\",\n    \"cardStatus\": \"ACTIVE\",\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": \"05/30\",\n    \"virtualCardCVVExpiryTime\": null\n}"
+								},
+								{
+									"name": "updateCardDetails",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardId\": 20000000,\n  \"cardAlias\": \"Tessy's Card\",\n  \"status\": \"ACTIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:45:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"5bbfbe06-a6a7-4f84-baf2-1ae8d49bb48c\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"cardId\": 20000000,\n    \"cardAlias\": \"Tessy's Card\",\n    \"accountId\": null,\n    \"cardType\": \"PHYSICAL\",\n    \"cardStatus\": \"ACTIVE\",\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": \"05/30\",\n    \"virtualCardCVVExpiryTime\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "deleteCardDetails",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardId\": 20000000\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cards/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cards",
+										"delete"
+									]
+								},
+								"description": "deleteCardDetails"
+							},
+							"response": [
+								{
+									"name": "deleteCardDetails",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"messageId\": \"{{$guid}}\",\n  \"cardId\": 20000000\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cards/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cards",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 May 2025 14:49:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messageId\": \"e4415763-afc7-405f-9f37-46e63e20015d\",\n    \"statusCode\": \"0\",\n    \"statusDescription\": \"Success\",\n    \"errorInfoList\": null,\n    \"cardId\": 20000000,\n    \"cardAlias\": null,\n    \"accountId\": null,\n    \"cardType\": null,\n    \"cardStatus\": \"INACTIVE\",\n    \"pan\": null,\n    \"cvv\": null,\n    \"cardExpiryDate\": null,\n    \"virtualCardCVVExpiryTime\": null\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

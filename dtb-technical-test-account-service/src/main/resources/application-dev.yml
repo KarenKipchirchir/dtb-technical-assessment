@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: dtb-technical-test-account-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dtb
+    username: postgres
+    password:
+    driverClassName: org.postgresql.Driver
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+properties:
+  idempotencyCheck: 5
+  countryCode: KE
+  bankCode: 230123
+  checkDigitsPlaceHolder: 00
+  accountNumbersStartingPoint: 100000000
+  maxAccounts: 2
